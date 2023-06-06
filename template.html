@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        {}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+<body>
+
+    <div class="ceter-wrapper">
+    <nav class="sidebar sidebar-background sidebar-text" id="sidebar">
+        <a href="https://en.wikipedia.org/wiki/Labrador_Retriever" target="_blank"><img class="unilogo" src="images/UniLogo.png" alt="Uni logo" width="100"></a>
+        <a href="#" onclick="close_sidebar()" class="close-sidebar-button hover-background-color" title="close menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <img class="photo" src="images/me.jpg" alt="Photo of a handsome person">
+        <ul class="navi-menu">
+            {}
+        </ul>
+        <!-- list of contacts and social media links-->
+
+        <div class="social-links-block">
+            {}
+        </div>
+
+    </nav>
+
+    <div class="overlay" onclick="close_sidebar()" title="close menu" id="overlay"></div>
+    <a href="#" class="up-button" id="up-btn"><i class="fa fa-chevron-up"></i></a>
+
+    <div class="main">
+        <div class="header content-background">
+            <span class="open-sidebar-button hover-background-color open-sidebar-button-color" onclick="open_sidebar()"><i class="fa fa-bars"></i></span>
+            <img class="small-photo" src="images/me.jpg" alt="Photo of a handsome person">
+        </div>
+
+        
+        <div class="content content-background">
+            <p style="margin:0px"><i>Last updated on {}</i></p>
+            {}
+        </div>
+    </div>
+
+    <script>
+        function open_sidebar() {{
+            document.getElementById("sidebar").style.display = "block";
+            document.getElementById("overlay").style.display = "block";
+        }}
+        
+        function close_sidebar() {{
+            document.getElementById("sidebar").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }}
+
+        function close_all_bibtex_windows() {{
+            var dropdowns = document.getElementsByClassName("bibtex-window");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {{
+                dropdowns[i].style.display = "none"
+            }}
+        }}
+
+        function show(id) {{
+            close_all_bibtex_windows()
+            document.getElementById(id).style.display = "block";
+        }}
+
+        window.onclick = function(event) {{
+            if (!event.target.classList.contains('image-button') && !event.target.classList.contains('bibtex-window')  && event.target.tagName != 'PRE') {{
+                close_all_bibtex_windows()
+            }}
+        }}
+
+        window.onscroll = function() {{
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {{
+                document.getElementById("up-btn").style.display = "block";
+            }} else {{
+                document.getElementById("up-btn").style.display = "none";
+            }}
+        }}
+    </script>
+    </div>
+</body>
+
+</html>
