@@ -21,10 +21,16 @@ This is a simple generator of a personal page, which is optimized for the people
 - The list of publications can be taken either from a `*.bib` file or directly form your DBLP page 
 - A bibtex button allows to get a bibitem (makes citing you easier)
 
-Mobile view: ![mobile view 1](screenshots/mobile.png) ![mobile view 1](screenshots/mobile-menu.png)
- 
+Mobile view (with open and closed menu): 
+
+<img src='./screenshots/mobile.png' width=45%>&#160;
+<img src='./screenshots/mobile-menu.png' width=45%> 
+
+
 Wide screen view:
+
 ![Wide screen view](screenshots/desktop.png)
 
-Half-screen view:
+Half-screen view (no margin to the left from the menu):
+
 ![Half screen view](screenshots/desktop-half.png)
