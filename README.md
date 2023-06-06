@@ -13,3 +13,18 @@ This is a simple generator of a personal page, which is optimized for the people
     - If you chose to add the list of publications, this script will try to add a link to arxiv to your conference or journal papaers, but sometimes it needs some assistance from you
 4. Put the generated `index.html` file together with `styles.css` and the folders `fonts` and `images` to your server
  
+## Features
+
+- This generator is easy to adjust for your institute's design
+- The website is adjusted to also look well on mobile devices
+- Smart generation of the list of publications, which puts the links to the corresponding arxiv papers to your conference/journal publications
+- The list of publications can be taken either from a `*.bib` file or directly form your DBLP page 
+- A bibtex button allows to get a bibitem (makes citing you easier)
+
+Mobile view: ![mobile view 1](screenshots/mobile.png) ![mobile view 1](screenshots/mobile-menu.png)
+ 
+Wide screen view:
+![Wide screen view](screenshots/desktop.png)
+
+Half-screen view:
+![Half screen view](screenshots/desktop-half.png)
