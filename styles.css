@@ -2,42 +2,52 @@ body {
     margin: 0px;
     font-family: "Lato";
     font-size: 16px;
+    /* color 3 */
     background-color: #f9edaa;
     padding-left: 10%;
 }
 
 .sidebar-background, .up-button{
+    /* color 1 */
     background-color: #2c1f12;
 }
 
 .open-sidebar-button-color {
+    /* color 1 */
     color: #2c1f12;
 }
 
 .sidebar-text a, .up-button{
+    /* color 2 */
     color: white;
 }
 
 .hover-background-color:hover, .navi-item a:hover {
+    /* color 5 */
     background-color: #b0883c;
 }
 
 .content-background {
+    /* color 4 */
     background-color: white;
 }
 
 .bibtex-window-colors {
+    /* color 1 */
     border-color: #2c1f12;
     background-color: #F1F1F1;
 }
 
 .content a:link {
+    /* color 6, preferably equal to color 5 */
     color: #b0883c;
 }
 .content a:visited {
+    /* color 6, preferably equal to color 1 */
     color: #2c1f12;
 }
 .content a:hover {
+    /* color 6, can be anything */ 
     color: #d40000;
 }
 

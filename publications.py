@@ -16,7 +16,7 @@ def read_bib_dblp(profile_link):
     return bibtexparser.load(io.StringIO(requests.get(bib_link, allow_redirects=True).content.decode('UTF-8')))
     
 
-def gen_html_by_database(bib_database):
+def gen_html_by_database(bib_database, rename_conferences=False):
     # get rid of PhD thesis, it should not be in the list of publications
     # also I am lazy to process @misc items
     bib_database.entries = [entry for entry in bib_database.entries if entry['ENTRYTYPE'] not in ('phdthesis', 'misc')]
@@ -55,34 +55,35 @@ def gen_html_by_database(bib_database):
 
     # renaming conferences and journals, 
     # this part of the script must be customized according to your personal needs and preferences
-    for entry in bib_database.entries:
-        if entry['ENTRYTYPE'] == 'inproceedings':
-            if 'booktitle' not in entry:
-                continue
-            # GECCO
-            if 'GECCO' in entry['booktitle']:
-                entry['booktitle'] = 'Genetic and Evolutionary Computation Conference, {{GECCO}} {}'.format(entry['year'])
-            # PPSN
-            if 'PPSN' in entry['booktitle']:
-                if 'Part' in entry['booktitle']: 
-                    # I am counting on the part being in the end of the booktitle
-                    entry['booktitle'] = 'Parallel Problem Solving from Nature, {{PPSN}} {}, Part {}'.format(entry['year'], entry['booktitle'].split()[-1])
-                else:
-                    entry['booktitle'] = 'Parallel Problem Solving from Nature, {{PPSN}} {}'.format(entry['year'])
-            # FOGA
-            if 'FOGA' in entry['booktitle']:
-                entry['booktitle'] = 'Foundations of Genetic Algorithms, {{FOGA}} {}'.format(entry['year'])
-            # CEC
-            if 'CEC' in entry['booktitle']:
-                entry['booktitle'] = 'Congress on Evolutionary Computation, {{CEC}} {}'.format(entry['year'])
-            # EvoCOP
-            if 'EvoCOP' in entry['booktitle']:
-                entry['booktitle'] = 'Evolutionary Computation in Combinatorial Optimization, {{E}}vo{{COP}} {}'.format(entry['year'])
-        if entry['ENTRYTYPE'] == 'article':
-            if 'journal' not in entry:
-                continue
-            if entry['journal'] == '{ACM} Trans. Evol. Learn. Optim.':
-                entry['journal'] = '{ACM} Transactions on Evolutionary Learning and Optimization'
+    if rename_conferences:
+        for entry in bib_database.entries:
+            if entry['ENTRYTYPE'] == 'inproceedings':
+                if 'booktitle' not in entry:
+                    continue
+                # GECCO
+                if 'GECCO' in entry['booktitle']:
+                    entry['booktitle'] = 'Genetic and Evolutionary Computation Conference, {{GECCO}} {}'.format(entry['year'])
+                # PPSN
+                if 'PPSN' in entry['booktitle']:
+                    if 'Part' in entry['booktitle']: 
+                        # I am counting on the part being in the end of the booktitle
+                        entry['booktitle'] = 'Parallel Problem Solving from Nature, {{PPSN}} {}, Part {}'.format(entry['year'], entry['booktitle'].split()[-1])
+                    else:
+                        entry['booktitle'] = 'Parallel Problem Solving from Nature, {{PPSN}} {}'.format(entry['year'])
+                # FOGA
+                if 'FOGA' in entry['booktitle']:
+                    entry['booktitle'] = 'Foundations of Genetic Algorithms, {{FOGA}} {}'.format(entry['year'])
+                # CEC
+                if 'CEC' in entry['booktitle']:
+                    entry['booktitle'] = 'Congress on Evolutionary Computation, {{CEC}} {}'.format(entry['year'])
+                # EvoCOP
+                if 'EvoCOP' in entry['booktitle']:
+                    entry['booktitle'] = 'Evolutionary Computation in Combinatorial Optimization, {{E}}vo{{COP}} {}'.format(entry['year'])
+            if entry['ENTRYTYPE'] == 'article':
+                if 'journal' not in entry:
+                    continue
+                if entry['journal'] == '{ACM} Trans. Evol. Learn. Optim.':
+                    entry['journal'] = '{ACM} Transactions on Evolutionary Learning and Optimization'
                 
 
     # writer in bibtexparser library messes up the order of items, 

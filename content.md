@@ -4,8 +4,6 @@ https://dblp.org/pid/160/0973.html
 https://scholar.google.com/citations?hl=en&user=X3G0oowAAAAJ
 https://orcid.org/0000-0001-7906-096X
 https://www.scopus.com/authid/detail.uri?authorId=56560269000
-https://www.researchgate.net/profile/Denis-Antipov
-https://www.instagram.com/antipovden/
 https://twitter.com/antipovden239/
 https://t.me/antipovden
 

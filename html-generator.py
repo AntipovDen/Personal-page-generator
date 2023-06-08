@@ -131,7 +131,8 @@ output_file = 'index.html'
 args = sys.argv
 
 if '-h' in args or '--help' in args:
-    print("Usage: python html-generator.py [-il link-to-dblp | -if input-bib-file=bibliography.bib] [-t template-file=template.html] [-o output-file=index.html]")
+    # print("Usage: python html-generator.py [-il link-to-dblp | -if input-bib-file=bibliography.bib] [-t template-file=template.html] [-o output-file=index.html]")
+    print("Usage: python html-generator.py [-il link-to-dblp | -if input-bib-file=bibliography.bib]")
     print("If both -il and -if arguments are present, -if is used")
     print("The order of arguments is not important")
     print("The DBLP link should be to the author's page, not his bibliography page, e.g., 'https://dblp.org/pid/160/0973.html'")
@@ -144,10 +145,10 @@ for i in range(1, len(args)):
         input_bib_file = args[i + 1]
     elif args[i] == '-ic':
         input_content_file = args[i + 1]
-    elif args[i] == '-t':
-        template_file = args[i + 1]
-    elif args[i] == '-o':
-        output_file = args[i + 1]
+    # elif args[i] == '-t':
+    #     template_file = args[i + 1]
+    # elif args[i] == '-o':
+    #     output_file = args[i + 1]
 
 bib_database = None
 
