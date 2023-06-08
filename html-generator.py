@@ -5,7 +5,7 @@ from datetime import date
 import sys
 from os.path import exists
 
-def generate_content(content_filename, bib_database):
+def generate_content(content_filename, bib_database, change_conference_names = False):
     with open(content_filename, 'r') as f:
         lines = f.readlines()
 
@@ -112,7 +112,7 @@ def generate_content(content_filename, bib_database):
         content += ' ' * 12 + '<div id = "{}">\n'.format(id(section[0]))
         content += ' ' * 16 + '<h1>{}</h1>\n'.format(section_title(section[0]))
         if section[0] == 'Publications' and bib_database is not None: 
-            content += gen_html_by_database(bib_database)
+            content += gen_html_by_database(bib_database, change_conference_names)
         for section_part in section[1]:
             content += print_html(section_part)
         content += ' ' * 12 + '</div>\n\n'
@@ -127,6 +127,7 @@ input_bib_file = None
 input_bib_link = None
 template_file = 'template.html'
 output_file = 'index.html'
+change_conference_names = False
 
 args = sys.argv
 
@@ -143,8 +144,10 @@ for i in range(1, len(args)):
         input_bib_link = args[i + 1]
     elif args[i] == '-if':
         input_bib_file = args[i + 1]
-    elif args[i] == '-ic':
-        input_content_file = args[i + 1]
+    elif args[i] == '-c':
+        change_conference_names = True
+    # elif args[i] == '-ic':
+    #     input_content_file = args[i + 1]
     # elif args[i] == '-t':
     #     template_file = args[i + 1]
     # elif args[i] == '-o':
@@ -163,7 +166,7 @@ else:
 
 
 
-name, menu, links, content = generate_content(input_content_file, bib_database)
+name, menu, links, content = generate_content(input_content_file, bib_database, change_conference_names)
 
 with open(template_file, 'r') as f:
     template = f.read()
