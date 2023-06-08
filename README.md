@@ -45,6 +45,8 @@ Half-screen view (no margin to the left from the menu):
 
 # Adjusting the design
 
+First download 
+
 ## Color scheme
 
 Most universities and companies have their own corporate style, which includes the preferable color scheme. You should choose the colors for your webpage from such a palette. The page color scheme includes:
