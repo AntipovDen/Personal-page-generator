@@ -77,7 +77,7 @@ Upload the desired favicon (the icon shown in the browser's tab title) to the `i
 
 ## [Optional] Changing the font
 
-Some universities also have their own font. If you want to use it in your web-page, upload it to the fonts folder (it can be `.ttf`, `.otf` or any other font file) and change the font name in line 3 of `styles.css`. The default Lato font is supposed to look nice for most people, but you never can satisfy everyone.
+Some universities also have their own font. If you want to use it in your web-page, you should change the font name in line 3 of `styles.css`. The default Lato font is supposed to look nice for most people, but you never can satisfy everyone. Some of the fonts are not supported by some operating system by default, so Lato is the safest option. Otherwise you might want to google the right way to use your font in html. Often for this you just need to add a link to the font files into the `<head>` of your `html` file.
 
 # Preparing the content
 
