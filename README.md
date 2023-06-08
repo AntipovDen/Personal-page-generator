@@ -45,6 +45,10 @@ Half-screen view (no margin to the left from the menu):
 
 # Adjusting the design
 
+First download the project via tortoise git or via the commant line:
+
+    `git clone https://github.com/AntipovDen/Personal-page-generator.git`
+
 ## Color scheme
 
 Most universities and companies have their own corporate style, which includes the preferable color scheme. You should choose the colors for your webpage from such a palette. The page color scheme includes:
@@ -65,7 +69,7 @@ To setup corresponding colors yoy should edit `styles.css` file. The comments in
 
 ### Changing the logo and your photo
 
-Upload your university or company logo to the the `images` folder and rename it to `UniLogo.png` or put the actual name of the file to the corresponding part of line 16 of `template.html`. Suggestion: most universities have logos of different styles, and usually they have a horizontal one, which has a width to height ratio approximately 5:1. This is the best logo for this webpage.
+Upload your university or company logo to the the `images` folder and rename it to `UniLogo.png` or put the actual name of the file to the corresponding part of line 16 of `template.html`. Suggestion: most universities have logos of different styles, and usually they have a horizontal one, which has a width to height ratio approximately 5:1. This is the best logo for this webpage. Also update the link to your university's website in line 16 of `template.html` in `href` field. 
 
 Upload your favorite photo of yourself to the `images` folder and rename it to `me.jpg` or put the actual name of the file to the corresponding part of line 20 of `template.html`. Please, crop our photo as a perfect square, otherwise it will appear not in a circle, but in an ellipse.
 
@@ -73,7 +77,7 @@ Upload the desired favicon (the icon shown in the browser's tab title) to the `i
 
 ## [Optional] Changing the font
 
-Some universities also have their own font. If you want to use it in your web-page, upload it to the fonts folder (it can be `.ttf`, `.otf` or any other font file) and change the font name in line 3 of `styles.css`. The default Lato font is supposed to look nice for most people, but you never can satisfy everyone.
+Some universities also have their own font. If you want to use it in your web-page, you should change the font name in line 3 of `styles.css`. The default Lato font is supposed to look nice for most people, but you never can satisfy everyone. Some of the fonts are not supported by some operating system by default, so Lato is the safest option. Otherwise you might want to google the right way to use your font in html. Often for this you just need to add a link to the font files into the `<head>` of your `html` file.
 
 # Preparing the content
 
