@@ -139,6 +139,16 @@ If you want to specify some `.bib` file different from `bibliography.bib`, you c
 
     python3 html-generator.py -if "relative/path/to/your/publications.bib"
     
+Independently of the above arguments you can add `-c` so that your bibliography had shorter conference and journal names (e.g., without the dates and the hosting city). This is hard to understand, how the names should be transformed, so to get a satisfying result, you should edit the part or `publications.py` file (lines 60-86) to use this feature for your personal needs. Example of the command to use this feature together with a link to DBLP:
+
+    python3 html-generator.py -il https://dblp.org/pid/160/0973.html -c
+
+or
+
+    python3 html-generator.py -c -il https://dblp.org/pid/160/0973.html
+
+The order if arguments does not play any role.
+
 ## While running the script
 
 The generator will automatically match your arXiv papers with your conference and journal papers with the same name. However, sometimes papers are published at arXiv with different names, sometimes they do not have a reviewed version or probably DBLP messed up the LaTeX-style names of your papers, so the name of arXiv paper and its reviewed version are too different (if they have a Levenshtein distance at most 9, then the generator will match them). When the generator cannot find a matching paper, it will ask you what to do, proposing you to 
