@@ -69,7 +69,7 @@ To setup corresponding colors yoy should edit `styles.css` file. The comments in
 
 ### Changing the logo and your photo
 
-Upload your university or company logo to the the `images` folder and rename it to `UniLogo.png` or put the actual name of the file to the corresponding part of line 16 of `template.html`. Suggestion: most universities have logos of different styles, and usually they have a horizontal one, which has a width to height ratio approximately 5:1. This is the best logo for this webpage.
+Upload your university or company logo to the the `images` folder and rename it to `UniLogo.png` or put the actual name of the file to the corresponding part of line 16 of `template.html`. Suggestion: most universities have logos of different styles, and usually they have a horizontal one, which has a width to height ratio approximately 5:1. This is the best logo for this webpage. Also update the link to your university's website in line 10 of `template.html` in `href` field. 
 
 Upload your favorite photo of yourself to the `images` folder and rename it to `me.jpg` or put the actual name of the file to the corresponding part of line 20 of `template.html`. Please, crop our photo as a perfect square, otherwise it will appear not in a circle, but in an ellipse.
 
