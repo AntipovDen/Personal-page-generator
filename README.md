@@ -45,7 +45,9 @@ Half-screen view (no margin to the left from the menu):
 
 # Adjusting the design
 
-First download 
+First download the priject via the tortoise git or via the commant line:
+
+    `git clone https://github.com/AntipovDen/Personal-page-generator.git`
 
 ## Color scheme
 
