@@ -121,15 +121,16 @@ body {
 }
 
 .social-links-block {
-    margin: 10px;
-    margin-left: 15px;
+    padding: 10px;
+    padding-left: 15px;
 }
 
 .social-link {
-    display: block;
+    display: flex;
     float:left;
     font-size: 20px;
     text-decoration: none;
+    margin-bottom: 5px;
     margin-right: 10px;
 }
 

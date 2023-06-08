@@ -10,7 +10,8 @@ This is a simple generator of a personal page, which is optimized for the people
     - Write the content of the page into the `content.md` file (the format of this file is described below)
     - \[Optional\] Prepare a bibliography file to be added to your webpage
 3. Run the generator script
-    - If you chose to add the list of publications, this script will try to add a link to arxiv to your conference or journal papaers, but sometimes it needs some assistance from you
+    - Prepare the dependencies (Python 3 and several packages for it)
+    - If you chose to add the list of publications, this script will try to add a link to arXiv to your conference or journal papers, but sometimes it needs some assistance from you
 4. Put the generated `index.html` file together with `styles.css` and the folders `fonts` and `images` to your server
  
 ## Features
@@ -23,14 +24,15 @@ This is a simple generator of a personal page, which is optimized for the people
 
 Mobile view (with open and closed menu): 
 
-<img src='./screenshots/mobile.png' width=45%>&#160;
-<img src='./screenshots/mobile-menu.png' width=45%> 
+<img src='./screenshots/mobile.png' height=400pt>&#160;&#160;
+<img src='./screenshots/mobile-menu.png' height=400pt> 
 
 
 Wide screen view:
 
-![Wide screen view](screenshots/desktop.png)
+
+<img src='./screenshots/desktop.png' height=400pt> 
 
 Half-screen view (no margin to the left from the menu):
 
-![Half screen view](screenshots/desktop-half.png)
+<img src='./screenshots/desktop-half.png' height=400pt> 
