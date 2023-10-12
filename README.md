@@ -18,7 +18,7 @@ This is a simple generator of a personal page, which is optimized for the people
 
 You do not need to give any credit to me for using this generator, but if you do, I would appreciate if you send me the link to your page to add it to this list of examples.
 
-[Denis Antipov](https://ctlab.itmo.ru/~dantipov/)
+[Denis Antipov](https://cs.adelaide.edu.au/~denis/)
 
 ## Features
 
