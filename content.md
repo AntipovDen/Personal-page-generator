@@ -21,7 +21,7 @@ I am a labrador Friend working at "Labrador labs inc.". I am an expert in sticks
 
 # Awards
 
-- The goodest boy in opinion of [my human](https://ctlab.itmo.ru/~dantipov/) 2015-2023
+- The goodest boy in opinion of [my human](https://cs.adelaide.edu.au/~denis/) 2015-2023
 - The biggest stick found 2018, 2020, 2021
 
 # Publications

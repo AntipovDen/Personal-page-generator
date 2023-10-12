@@ -11,7 +11,7 @@ This is a simple generator of a personal page, which is optimized for the people
     - \[Optional\] Prepare a bibliography file to be added to your webpage
 3. Run the generator script
     - Prepare the dependencies (Python 3 and several packages for it)
-    - If you chose to add the list of publications, this script will try to add a link to arXiv to your conference or journal papers, but sometimes it needs some assistance from you
+    - If you chose to add the list of publications, this script will try to add an arXiv link to your conference or journal papers, but sometimes it needs some assistance from you
 4. Put the generated `index.html` file together with `styles.css` and the folders `fonts` and `images` to your server
  
 ## Example pages
@@ -36,12 +36,8 @@ Mobile view (with open and closed menu):
 
 Wide screen view:
 
-
 <img src='./screenshots/desktop.png' height=400pt> 
 
-Half-screen view (no margin to the left from the menu):
-
-<img src='./screenshots/desktop-half.png' height=400pt> 
 
 # Adjusting the design
 
@@ -57,14 +53,14 @@ Most universities and companies have their own corporate style, which includes t
 2. Sidebar text color *(suggestion: choose white color or the whitest color from palette)*
 3. Margin color *(suggestion: choose some kind of light color, or you can choose a sidebar color and add some opacity to it)*
 4. Content background color *(suggestion: choose white)*
-5. Background color for buttons when you hover over them *(suggestion: choose something brighter than the background, but text in sidebar-text-color must look well on it)
+5. Background color for buttons when you hover over them *(suggestion: choose something brighter than the background, but text in sidebar-text-color must look well on it)*
 6. [Optional] The color for the links on the page *(suggestion: choose the sidebar color for the visited links and the background color for buttons for the unvisited links)*
 
 The screenshot below explains the colors in the webpage:
 
 <img src='./screenshots/colors-illustration.png' height=400pt> 
 
-To setup corresponding colors yoy should edit `styles.css` file. The comments in that file indicate, where you should change the colors. Note that all necessary colors are set up in the beginning of the file, in the first 51 lines.
+To setup corresponding colors you should edit `styles.css` file. The comments in that file indicate, where you should change the colors. Note that all necessary colors are set up in the beginning of the file, in the first 51 lines.
 
 
 ### Changing the logo and your photo
@@ -86,7 +82,7 @@ To prepare the content you should edit `content.md` file. This file uses a markd
 1. The first line of `content.md` should contain your name (it will be displayed in the tab name in the viewer's browser)
 2. The next lines are the links to your pages at social media, which are displayed in the sidebar (in the same order as you mention them in `content.md`). The supported links are: DBLP, Google Scholar, ORCID, ResearchGate, Scopus, LinkedIn, Telegram, Facebook, Twitter and Instagram.
 3. After that `content.md` contains the actual content of the page, which is divided into sections.
-    - Each section starts with its name, which is a line starting with a `#` symbol. Each section has its own link in the sidebar menu. By default, you will see in the sidebar tha actual name of the section, but if you want to shorten it, you can add a short name for it after another `#` symbol in the same line, like this:     
+    - Each section starts with its name, which is a line starting with a `#` symbol. Each section has its own link in the sidebar menu. By default, you will see in the sidebar the actual name of the section, but if you want to shorten it, you can add a short name for it after another `#` symbol in the same line, like this:     
     
         `# The name of the section # Short name`
     - Then you add the content of the section, which can be a paragraph, a list or a list with specific items
@@ -99,7 +95,7 @@ To prepare the content you should edit `content.md` file. This file uses a markd
         `[click me to get to google](https://google.com)`
     - To add a list you just add a bunch of lines, each of which starts with `-`. An example of a section with a list is the "Awards" section on the screenshots above. you also can use HTML or Markdown features in the lists.
     - The lists with specified items are mostly used for the lists with dates (e.g., working experience or education). The example is the "Education and career section" in the screenshots above. To make such a list, you should start each line with `*` symbol and use the column `:` to separate the dates from the item content. 
-    - If you name some section "Publications", then the generator can fill it with the list of you publication (see instructions on it below). You can also add some content here, it will be added after the list of publications.
+    - If you name some section "Publications", then the generator can fill it with the list of your publication (see instructions on it below). You can also add some content here, it will be added after the list of publications.
 
 ## [Optional] Preparing the bibliography
 
@@ -108,6 +104,8 @@ If you want to have a list of publications, you have two options:
 2. Prepare a `.bib` file, containing all your publications.
 
 The main reasons to prepare your `.bib` file is that you accepted but not published papers are not shown at DBLP. Also, you might find the DBLP format of conference names clumsy, e.g., you do not want to include the dates and the hosting city, so you can edit your bib file as you want. 
+
+**\[Advanced\]** The publication generator can also automatically replace the unwanted names of conferences and journals. The rules for this are defined in lines 58-86 of `publications.py` script and can be edited manually.
 
 # Run the generator
 
@@ -147,7 +145,7 @@ or
 
     python3 html-generator.py -c -il https://dblp.org/pid/160/0973.html
 
-The order if arguments does not play any role.
+The order of arguments does not play any role.
 
 ## While running the script
 
@@ -174,7 +172,7 @@ To choose one of the options you should enter the number of this option and pres
 3. The last two digits of the year it was published
 4. If there are two identical IDs, then the name of the journal or conference is added.
 
-After the script finishes its work, you can view the resulting file `index.html` in your favorite browser and fix the mistakes you made in the previous steps. Note that to fixe the style mistakes you do not have to re-run the script, just edit `style.css` file.
+After the script finishes its work, you can view the resulting file `index.html` in your favorite browser and fix the mistakes you made in the previous steps. Note that to fix the style mistakes you do not have to re-run the script, just edit `style.css` file.
 
 # Upload your web-page to your server
 

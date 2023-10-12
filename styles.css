@@ -4,7 +4,6 @@ body {
     font-size: 16px;
     /* color 3 */
     background-color: #f9edaa;
-    padding-left: 10%;
 }
 
 .sidebar-background, .up-button{
@@ -169,7 +168,6 @@ body {
     height: 100%;
     width: 200px;
     position: fixed;
-    left: 10%;
     top: 0;
     z-index: 2;
     overflow: auto;
@@ -228,6 +226,11 @@ body {
     text-align: justify;
 }
 
+.center-wrapper {
+    display: flex;
+    margin: auto;
+}
+
 @media (max-width:899px) {
     .sidebar {
         display: none;
@@ -244,6 +247,7 @@ body {
     
     .main {
         margin-left:0px;
+        width: 100%;
     }
 
     .unilogo {
@@ -251,7 +255,11 @@ body {
     }
 
     .content {
-        max-width: 100%;
+        width: 100%;
+    }
+
+    .center-wrapper {
+        width: 100%;
     }
 
     .list-item {
@@ -277,31 +285,15 @@ body {
     }
 
     .content {
-        max-width: 640px;
+        width: 640px;
     }
 
     .list-item {
         min-width: 100px;
     }
-}
 
-@media (max-width:1199px){
-    body {
-        padding-left: 0px;
-    }
-
-    .sidebar {
-        left: 0;
-    }
-}
-
-@media (min-width:1200px){
-    body {
-        padding-left: 10%;
-    }
-
-    .sidebar {
-        left: 10%;
+    .center-wrapper {
+        width: 900px;
     }
 }
 

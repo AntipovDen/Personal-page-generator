@@ -51,7 +51,8 @@ def gen_html_by_database(bib_database, rename_conferences=False):
             entry['OPTeditor'] = entry.pop('editor')
         unnecessary_fields = ['timestamp', 'biburl', 'bibsource', 'IDsuffix']
         for field in unnecessary_fields:
-            del entry[field]
+            if field in entry:
+                del entry[field]
 
     # renaming conferences and journals, 
     # this part of the script must be customized according to your personal needs and preferences
@@ -62,7 +63,10 @@ def gen_html_by_database(bib_database, rename_conferences=False):
                     continue
                 # GECCO
                 if 'GECCO' in entry['booktitle']:
-                    entry['booktitle'] = 'Genetic and Evolutionary Computation Conference, {{GECCO}} {}'.format(entry['year'])
+                    if 'Companion' in entry['booktitle']:
+                        entry['booktitle'] = 'Genetic and Evolutionary Computation Conference Companion, {{GECCO}} {}'.format(entry['year'])
+                    else:
+                        entry['booktitle'] = 'Genetic and Evolutionary Computation Conference, {{GECCO}} {}'.format(entry['year'])
                 # PPSN
                 if 'PPSN' in entry['booktitle']:
                     if 'Part' in entry['booktitle']: 
